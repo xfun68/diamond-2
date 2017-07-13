@@ -9,15 +9,26 @@ import java.util.Arrays;
 
 public class DiamondTest {
 
-    private final Printer printer = new Printer(new LineGenerator());
-
     @Test
     public void print_diamond_for_C() throws Exception {
+        Printer printer = new Printer(new LineGenerator());
         Assert.assertEquals(Arrays.asList(
                 "  A  ",
                 " B B ",
                 "C   C",
                 " B B ",
+                "  A  "),
+                printer.diamond("C"));
+    }
+
+    @Test
+    public void print_super_diamond_for_C() throws Exception {
+        Printer printer = new Printer(new LineGenerator('*'));
+        Assert.assertEquals(Arrays.asList(
+                "  A  ",
+                " B*B ",
+                "C***C",
+                " B*B ",
                 "  A  "),
                 printer.diamond("C"));
     }

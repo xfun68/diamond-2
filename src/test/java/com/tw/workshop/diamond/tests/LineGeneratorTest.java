@@ -43,4 +43,10 @@ public class LineGeneratorTest {
     public void generate_line_for_diamond_letter_D_and_line_letter_B() throws Exception {
         assertEquals("  B B  ", lineGenerator.getLine("D", "B"));
     }
+
+    @Test
+    public void test_generate_super_line() throws Exception {
+        LineGenerator lineGenerator = new LineGenerator('*');
+        assertEquals(" B*B ", lineGenerator.getLine("C", "B"));
+    }
 }
