@@ -12,7 +12,9 @@ public class DiamondTest {
 
     @Test
     public void print_diamond_for_A() throws Exception {
-        Assert.assertEquals(Arrays.asList("A"), printer.diamond("A"));
+        Assert.assertEquals(Arrays.asList(
+                "A"),
+                printer.diamond("A"));
     }
 
     @Test
