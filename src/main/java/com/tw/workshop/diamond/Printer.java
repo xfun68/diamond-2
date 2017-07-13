@@ -5,7 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Printer {
-    private final LineGenerator lineGenerator = new LineGenerator();
+    private final LineGenerator lineGenerator;
+
+    public Printer(LineGenerator lineGenerator) {
+        this.lineGenerator = lineGenerator;
+    }
 
     public List<String> diamond(String letter) {
         List<String> result = new ArrayList<>();
